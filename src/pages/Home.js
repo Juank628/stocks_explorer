@@ -7,7 +7,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (list.length === 0) {
+    if (list.length === 0 && false) {
       dispatch(readStocks());
     }
   }, [dispatch, list.length]);
