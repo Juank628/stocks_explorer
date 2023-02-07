@@ -1,18 +1,28 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { readStocks } from '../redux/slices/stocks';
+import { readStocks, getSectorsData } from '../redux/slices/stocks';
 
 export default function Home() {
-  const { list } = useSelector((store) => store.stocksReducer);
+  const { stocks, sectors } = useSelector((store) => store.stocksReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (list.length === 0 && false) {
+    if (stocks.length === 0) {
       dispatch(readStocks());
     }
-  }, [dispatch, list.length]);
+    dispatch(getSectorsData());
+  }, [dispatch, stocks.length]);
 
   return (
-    <div>Home</div>
+    <section>
+      <ul>
+        {sectors.map((sector) => (
+          <li key={sector.name}>
+            <h3>{sector.name}</h3>
+            <p>{`${sector.marketCap}M`}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
