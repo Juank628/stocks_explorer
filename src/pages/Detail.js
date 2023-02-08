@@ -17,9 +17,18 @@ export default function Detail() {
     setSectorData(selectedSector);
   };
 
+  const getPerformance = () => {
+    const performance = performances[0];
+    let formatedSector = sector.replace(/-/g, '');
+    formatedSector = `${formatedSector[0]
+      .toLowerCase() + formatedSector
+      .substring(1)}ChangesPercentage`;
+    if (performance) return performance[formatedSector];
+    return 0;
+  };
+
   useEffect(() => {
     if (performances.length === 0) {
-      console.log(performances);
       dispatch(readPerformances());
     }
     getData();
@@ -30,6 +39,7 @@ export default function Detail() {
       <h3>{sectorData.name}</h3>
       <p>{`Market cap: ${sectorData.marketCap}M`}</p>
       <p>{`Number of companies: ${sectorData.numberOfCompanies}`}</p>
+      <p>{`performance: ${getPerformance()}`}</p>
       <p>Industries</p>
       <ul>
         { sectorData.industries?.map((sector) => (

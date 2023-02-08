@@ -8,16 +8,13 @@
 
 .companiesTable {
   width: 100%;
+  border-collapse: collapse;
 }
 
-.companiesTable, 
-.companiesTable th, 
+.companiesTable,
+.companiesTable th,
 .companiesTable td {
   border: 1px solid;
-}
-
-.companiesTable {
-  border-collapse: collapse;
 }
 
 .textCenter {
