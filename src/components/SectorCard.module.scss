@@ -1,0 +1,56 @@
+@import '../assets/global_variables.scss';
+
+.mainContainer {
+  color: white;
+}
+
+.mainContainer:nth-child(odd) {
+  background-color: $bg-primary;
+}
+
+.mainContainer:nth-child(even) {
+  background-color: $bg-primary-variant;
+}
+
+.linkContainer {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.infoContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.icon {
+  max-width: 40px;
+  object-fit: contain;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: right;
+}
+
+.marketCap {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}

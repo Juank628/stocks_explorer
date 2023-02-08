@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/detail/:ticker" element={<Detail />} />
+        <Route path="/detail/:sector" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );

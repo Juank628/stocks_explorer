@@ -1,0 +1,25 @@
+@import '../assets/global_variables.scss';
+
+.mainContainer {
+  padding: 10px;
+  background-color: $bg-primary-variant;
+  min-height: 100vh;
+}
+
+.companiesTable {
+  width: 100%;
+}
+
+.companiesTable, 
+.companiesTable th, 
+.companiesTable td {
+  border: 1px solid;
+}
+
+.companiesTable {
+  border-collapse: collapse;
+}
+
+.textCenter {
+  text-align: center;
+}
