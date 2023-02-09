@@ -31,39 +31,38 @@ export default function Detail() {
       // dispatch(readPerformances());
     }
     getData(sector, sectors);
+    getPerformance(sector, performances[0]);
   }, []);
 
   return (
     <div className={styles.mainContainer}>
       <h3>{sectorData.name}</h3>
-      <p>{`Market cap: ${sectorData.marketCap}M`}</p>
-      <p>{`Number of companies: ${sectorData.numberOfCompanies}`}</p>
-      <p>{`performance: ${() => getPerformance(sector, performances[0])}`}</p>
-      <p>Industries:</p>
-      <ul>
-        { sectorData.industries?.map((sector) => (
-          <li key={sector}>{sector}</li>
+      <div className={styles.metricsContainer}>
+        <div className={styles.box}>
+          <p>Market cap.</p>
+          <p>{`${sectorData.marketCap}M`}</p>
+        </div>
+        <div className={styles.box}>
+          <p>Companies</p>
+          <p>{sectorData.numberOfCompanies}</p>
+        </div>
+      </div>
+      <p>Top 5 companies</p>
+      <ul className={styles.companiesContainer}>
+        { sectorData.topCompanies?.map((company) => (
+          <li key={company.symbol} className={styles.box}>
+            <p>{company.companyName}</p>
+            <p>{company.symbol}</p>
+            <p>{`${Math.round(company.marketCap / 1000000, 0)}M`}</p>
+          </li>
         )) }
       </ul>
-      <p>Top 5 companies</p>
-      <table className={styles.companiesTable}>
-        <tbody>
-          <tr>
-            <th>company</th>
-            <th>symbol</th>
-            <th>value</th>
-          </tr>
-        </tbody>
-        <tbody>
-          { sectorData.topCompanies?.map((company) => (
-            <tr key={company.symbol}>
-              <td>{company.companyName}</td>
-              <td className={styles.textCenter}>{company.symbol}</td>
-              <td className={styles.textCenter}>{Math.round(company.marketCap / 1000000, 0)}</td>
-            </tr>
-          )) }
-        </tbody>
-      </table>
+      <p>Industries:</p>
+      <ul className={styles.industriesContainer}>
+        { sectorData.industries?.map((sector) => (
+          <li className={styles.box} key={sector}>{sector}</li>
+        )) }
+      </ul>
     </div>
   );
 }

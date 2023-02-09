@@ -6,17 +6,25 @@
   min-height: 100vh;
 }
 
-.companiesTable {
-  width: 100%;
-  border-collapse: collapse;
+.metricsContainer,
+.industriesContainer,
+.companiesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, (minmax(20rem, 1fr)));
 }
 
-.companiesTable,
-.companiesTable th,
-.companiesTable td {
-  border: 1px solid;
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
 }
 
-.textCenter {
-  text-align: center;
+.box:nth-child(odd) {
+  background-color: $bg-primary;
+}
+
+.box:nth-child(even) {
+  background-color: $bg-primary-alternate;
 }
