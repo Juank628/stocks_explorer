@@ -53,6 +53,8 @@
 
 [Go to live demo!!!](https://stocks-explorer.onrender.com)
 
+[Live video](https://www.loom.com/share/5bcd4c4345d346bdae4f4096c8bf42bd)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
