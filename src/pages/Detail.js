@@ -29,7 +29,7 @@ export default function Detail() {
 
   useEffect(() => {
     if (performances.length === 0) {
-      dispatch(readPerformances());
+      // dispatch(readPerformances());
     }
     getData();
   }, []);
@@ -40,7 +40,7 @@ export default function Detail() {
       <p>{`Market cap: ${sectorData.marketCap}M`}</p>
       <p>{`Number of companies: ${sectorData.numberOfCompanies}`}</p>
       <p>{`performance: ${getPerformance()}`}</p>
-      <p>Industries</p>
+      <p>Industries:</p>
       <ul>
         { sectorData.industries?.map((sector) => (
           <li key={sector}>{sector}</li>

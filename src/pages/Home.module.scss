@@ -1,5 +1,12 @@
 .mainContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  grid-auto-rows: 15rem;
+  grid-template-columns: repeat(auto-fill, (minmax(20rem, 1fr)));
+}
+
+.filterInput {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  padding: 0 20px;
 }
