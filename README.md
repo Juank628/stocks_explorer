@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖  Stocks explorer ](#-stocks-explorer-)
+- [📖  Stocks explorer ](#-about-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
