@@ -11,19 +11,18 @@ export default function Detail() {
   const { sector } = useParams();
   const dispatch = useDispatch();
 
-  const getData = () => {
-    const formatedSector = sector.replace(/-/g, ' ');
-    const selectedSector = sectors.find((item) => item.name === formatedSector);
+  const getData = (sectorName, sectorsList) => {
+    const formatedSector = sectorName.replace(/-/g, ' ');
+    const selectedSector = sectorsList.find((item) => item.name === formatedSector);
     setSectorData(selectedSector);
   };
 
-  const getPerformance = () => {
-    const performance = performances[0];
-    let formatedSector = sector.replace(/-/g, '');
+  const getPerformance = (sectorName, performancesObject) => {
+    let formatedSector = sectorName.replace(/-/g, '');
     formatedSector = `${formatedSector[0]
       .toLowerCase() + formatedSector
       .substring(1)}ChangesPercentage`;
-    if (performance) return performance[formatedSector];
+    if (performancesObject) return performance[formatedSector];
     return 0;
   };
 
@@ -31,7 +30,7 @@ export default function Detail() {
     if (performances.length === 0) {
       // dispatch(readPerformances());
     }
-    getData();
+    getData(sector, sectors);
   }, []);
 
   return (
@@ -39,7 +38,7 @@ export default function Detail() {
       <h3>{sectorData.name}</h3>
       <p>{`Market cap: ${sectorData.marketCap}M`}</p>
       <p>{`Number of companies: ${sectorData.numberOfCompanies}`}</p>
-      <p>{`performance: ${getPerformance()}`}</p>
+      <p>{`performance: ${() => getPerformance(sector, performances[0])}`}</p>
       <p>Industries:</p>
       <ul>
         { sectorData.industries?.map((sector) => (
