@@ -70,8 +70,9 @@
 ### Setup
 
 Clone this repository to your desired folder:
-
+```
 git clone git@github.com:Juank628/stocks_explorer.git
+```
 
 ### Install
 
