@@ -1,0 +1,55 @@
+@import '../assets/global_variables.scss';
+
+.mainContainer {
+  padding: 10px;
+  background-color: $bg-primary-variant;
+  min-height: 100vh;
+}
+
+.mainContainer p {
+  margin: 8px 0;
+}
+
+.metricsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.industriesContainer,
+.companiesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.box:nth-child(odd) {
+  background-color: $bg-primary;
+}
+
+.box:nth-child(even) {
+  background-color: $bg-primary-alternate;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 70px;
+}
+
+.line:nth-child(odd) {
+  background-color: $bg-primary;
+}
+
+.boxTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
