@@ -77,9 +77,10 @@ git clone git@github.com:Juank628/stocks_explorer.git
 
 Install this project with:
 
-- npm install    (to install all the packages needed)
-- npm run build  (to generate the distribution files)
-- npm start      (to start the dev server)
+```
+npm install  //to install all the dependencies
+npm start    //to start the dev server
+```
 
 ### Usage
 
@@ -128,6 +129,15 @@ If you like this project, please give us an star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+Design adapted from a template created by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+View the original template [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENCE) licensed.
