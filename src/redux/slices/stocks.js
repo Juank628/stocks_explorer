@@ -2,10 +2,9 @@
 eslint no-param-reassign: ["error", { "props": false }]
 */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import bulkData from '../../assets/bulk';
 
 const initialState = {
-  stocks: bulkData,
+  stocks: [],
   sectors: [],
 };
 
