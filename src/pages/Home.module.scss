@@ -1,12 +1,46 @@
+@import '../assets/global_variables.scss';
+
 .mainContainer {
   display: grid;
   grid-auto-rows: 15rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.bannerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100px;
+  background-color: $bg-primary-variant;
+  padding: 10px 0;
+}
+
+.bannerContainer div {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.bannerLeft {
+  justify-content: flex-end;
+}
+
+.bannerRight {
+  justify-content: flex-start;
+}
+
+.bannerImg {
+  width: 100px;
+  object-fit: contain;
+}
+
+.bannerTitle {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .filterInput {
   width: 100%;
-  height: 30px;
-  border: 0;
+  height: 50px;
+  border: 6px solid $bg-primary;
   padding: 0 20px;
 }

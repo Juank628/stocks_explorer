@@ -15,20 +15,25 @@
 .linkContainer {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
   padding: 0 20px;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .iconContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
 }
 
 .infoContainer {
-  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,21 +41,27 @@
 }
 
 .icon {
-  max-width: 40px;
+  max-width: 60px;
+  object-fit: contain;
+}
+
+.arrow {
+  max-width: 25px;
   object-fit: contain;
 }
 
 .name {
   margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: 300;
+  margin-bottom: 10px;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 600;
   text-align: right;
 }
 
 .marketCap {
   margin: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
   text-align: right;
 }

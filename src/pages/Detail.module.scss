@@ -6,11 +6,19 @@
   min-height: 100vh;
 }
 
-.metricsContainer,
+.mainContainer p {
+  margin: 8px 0;
+}
+
+.metricsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
 .industriesContainer,
 .companiesContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  display: flex;
+  flex-direction: column;
 }
 
 .box {
@@ -27,4 +35,21 @@
 
 .box:nth-child(even) {
   background-color: $bg-primary-alternate;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 70px;
+}
+
+.line:nth-child(odd) {
+  background-color: $bg-primary;
+}
+
+.boxTitle {
+  font-size: 16px;
+  font-weight: 600;
 }

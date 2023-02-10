@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { readStocks, getSectorsData } from '../redux/slices/stocks';
 import SectorCard from '../components/SectorCard';
+import nyseIcon from '../assets/nyse_icon.png';
 import styles from './Home.module.scss';
 
 export default function Home() {
@@ -33,6 +34,14 @@ export default function Home() {
 
   return (
     <section>
+      <div className={styles.bannerContainer}>
+        <div className={styles.bannerLeft}>
+          <img className={styles.bannerImg} src={nyseIcon} alt="NYSE" />
+        </div>
+        <div className={styles.bannerRight}>
+          <p className={styles.bannerTitle}>NYSE</p>
+        </div>
+      </div>
       <form onSubmit={submitHandler}>
         <input type="text" placeholder="Find sector" onChange={filterSectors} className={styles.filterInput} />
       </form>

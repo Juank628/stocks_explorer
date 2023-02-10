@@ -43,20 +43,19 @@ export default function Detail() {
       <h3>{sectorData?.name}</h3>
       <div className={styles.metricsContainer}>
         <div className={styles.box}>
-          <p>Market cap.</p>
+          <p className={styles.boxTitle}>Market cap.</p>
           <p>{`${sectorData?.marketCap}M`}</p>
         </div>
         <div className={styles.box}>
-          <p>Companies</p>
+          <p className={styles.boxTitle}>Companies</p>
           <p>{sectorData?.numberOfCompanies}</p>
         </div>
       </div>
       <p>Top 5 companies</p>
       <ul className={styles.companiesContainer}>
         { sectorData?.topCompanies?.map((company) => (
-          <li key={company.symbol} className={styles.box}>
-            <p>{company.companyName}</p>
-            <p>{company.symbol}</p>
+          <li key={company.symbol} className={styles.line}>
+            <p className={styles.boxTitle}>{company.companyName}</p>
             <p>{`${Math.round(company.marketCap / 1000000, 0)}M`}</p>
           </li>
         )) }
@@ -64,7 +63,9 @@ export default function Detail() {
       <p>Industries:</p>
       <ul className={styles.industriesContainer}>
         { sectorData?.industries?.map((sector) => (
-          <li className={styles.box} key={sector}>{sector}</li>
+          <li className={styles.line} key={sector}>
+            <p className={styles.boxTitle}>{sector}</p>
+          </li>
         )) }
       </ul>
     </div>
